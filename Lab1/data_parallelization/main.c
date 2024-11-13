@@ -1,5 +1,9 @@
+// gcc -fopenmp main.c -o main
+
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 
 #define MAX_VALUES 1000 // Maximum number of values to handle
 
@@ -7,16 +11,42 @@ void create_histogram(double *values, int count, double min, double max) {
     int bins = (int)(max - min) + 1; // Each bin covers 1.0 unit (e.g., 1.0-1.9, 2.0-2.9)
     int *histogram = (int *)calloc(bins, sizeof(int));
     if (!histogram) {
-        fprintf(stderr, "Memory allocation failed.\n");
+        fprintf(stderr, "Memory allocation failed for global histogram.\n");
         return;
     }
 
-    // Populate histogram
-    for (int i = 0; i < count; i++) {
-        int bin_index = (int)(values[i] - min);
-        if (bin_index >= 0 && bin_index < bins) {
-            histogram[bin_index]++;
+    int memory_allocation_failed = 0;
+
+    // Parallel histogram population using OpenMP
+    #pragma omp parallel
+    {
+        int *local_histogram = (int *)calloc(bins, sizeof(int));
+        if (!local_histogram) {
+            #pragma omp atomic write
+            memory_allocation_failed = 1;
+        } else {
+            #pragma omp for
+            for (int i = 0; i < count; i++) {
+                int bin_index = (int)(values[i] - min);
+                if (bin_index >= 0 && bin_index < bins) {
+                    local_histogram[bin_index]++;
+                }
+            }
+
+            // Merge local histograms into the global histogram
+            #pragma omp critical
+            for (int i = 0; i < bins; i++) {
+                histogram[i] += local_histogram[i];
+            }
+
+            free(local_histogram);
         }
+    }
+
+    if (memory_allocation_failed) {
+        fprintf(stderr, "Memory allocation failed for one or more threads.\n");
+        free(histogram);
+        return;
     }
 
     // Print histogram
@@ -68,7 +98,7 @@ int main() {
 
     // Adjust min and max to align with bin boundaries
     min = (int)min; // Start bins at the lowest integer
-    max = (int)max; 
+    max = (int)max;
 
     create_histogram(values, count, min, max);
 
