@@ -1,0 +1,19 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Compiled files
+*.o
+*.out
+*.exe
+
+# C executable or object files
+main
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE specific files
+.vscode/
+.idea/
