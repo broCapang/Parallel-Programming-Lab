@@ -152,10 +152,10 @@ int main() {
     // Run serial histogram to get serial execution time
     double serial_execution_time;
     create_histogram_serial(values, count, min, max, &serial_execution_time);
-    printf("Serial Execution Time: %f seconds\n", serial_execution_time);
+    printf("\nSerial Execution Time: %f seconds\n", serial_execution_time);
 
     // Set different thread counts for analysis
-    int thread_counts[] = {1, 2, 4, 8, 16, 32};
+    int thread_counts[] = {1, 2, 4, 8, 16};
     int num_tests = sizeof(thread_counts) / sizeof(thread_counts[0]);
 
     for (int i = 0; i < num_tests; i++) {

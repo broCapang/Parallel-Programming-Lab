@@ -174,7 +174,7 @@ void create_histogram_serial(double *values, size_t count, double min, double ma
     double end_time = omp_get_wtime();
     *execution_time = end_time - start_time;
 
-    printf("Serial Execution Time: %f seconds\n", *execution_time);
+    printf("\nSerial Execution Time: %f seconds\n", *execution_time);
     printf("Mean Value: %f\n", mean);
     printf("Mode Value: %f with count %d\n", mode_value, max_count);
 
