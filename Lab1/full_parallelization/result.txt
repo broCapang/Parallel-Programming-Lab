@@ -1,0 +1,410 @@
+Run number 1
+
+Serial Execution Time: 0.600019 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.569984 seconds
+Speed-up: 1.052694
+Efficiency: 105.269396%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.305548 seconds
+Speed-up: 1.963747
+Efficiency: 98.187373%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.303244 seconds
+Speed-up: 1.978668
+Efficiency: 49.466693%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.297451 seconds
+Speed-up: 2.017201
+Efficiency: 25.215017%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.302109 seconds
+Speed-up: 1.986103
+Efficiency: 12.413145%
+Total Execution Time: 11.582753 seconds
+Run number 2
+
+Serial Execution Time: 0.600949 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.578381 seconds
+Speed-up: 1.039019
+Efficiency: 103.901933%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.307081 seconds
+Speed-up: 1.956975
+Efficiency: 97.848750%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.315225 seconds
+Speed-up: 1.906414
+Efficiency: 47.660353%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.302634 seconds
+Speed-up: 1.985733
+Efficiency: 24.821666%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.301532 seconds
+Speed-up: 1.992989
+Efficiency: 12.456178%
+Total Execution Time: 11.627647 seconds
+Run number 3
+
+Serial Execution Time: 0.600636 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.573691 seconds
+Speed-up: 1.046969
+Efficiency: 104.696904%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.308097 seconds
+Speed-up: 1.949507
+Efficiency: 97.475332%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.307783 seconds
+Speed-up: 1.951496
+Efficiency: 48.787396%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.312611 seconds
+Speed-up: 1.921356
+Efficiency: 24.016949%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.309097 seconds
+Speed-up: 1.943200
+Efficiency: 12.145002%
+Total Execution Time: 11.673072 seconds
+Run number 4
+
+Serial Execution Time: 0.573472 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.546460 seconds
+Speed-up: 1.049431
+Efficiency: 104.943127%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.293753 seconds
+Speed-up: 1.952227
+Efficiency: 97.611358%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.308330 seconds
+Speed-up: 1.859930
+Efficiency: 46.498249%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.305876 seconds
+Speed-up: 1.874851
+Efficiency: 23.435636%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.311480 seconds
+Speed-up: 1.841121
+Efficiency: 11.507006%
+Total Execution Time: 11.147748 seconds
+Run number 5
+
+Serial Execution Time: 0.590500 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.562449 seconds
+Speed-up: 1.049873
+Efficiency: 104.987287%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.301471 seconds
+Speed-up: 1.958730
+Efficiency: 97.936477%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.310436 seconds
+Speed-up: 1.902162
+Efficiency: 47.554055%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.310775 seconds
+Speed-up: 1.900086
+Efficiency: 23.751070%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.305235 seconds
+Speed-up: 1.934571
+Efficiency: 12.091067%
+Total Execution Time: 11.229489 seconds
+Run number 6
+
+Serial Execution Time: 0.586081 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.556237 seconds
+Speed-up: 1.053652
+Efficiency: 105.365226%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.291161 seconds
+Speed-up: 2.012912
+Efficiency: 100.645596%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.304233 seconds
+Speed-up: 1.926418
+Efficiency: 48.160455%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.301030 seconds
+Speed-up: 1.946919
+Efficiency: 24.336493%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.295680 seconds
+Speed-up: 1.982142
+Efficiency: 12.388389%
+Total Execution Time: 11.224474 seconds
+Run number 7
+
+Serial Execution Time: 0.604010 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.575563 seconds
+Speed-up: 1.049424
+Efficiency: 104.942449%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.310085 seconds
+Speed-up: 1.947885
+Efficiency: 97.394270%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.298725 seconds
+Speed-up: 2.021958
+Efficiency: 50.548946%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.301787 seconds
+Speed-up: 2.001440
+Efficiency: 25.018001%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.299297 seconds
+Speed-up: 2.018097
+Efficiency: 12.613105%
+Total Execution Time: 11.711999 seconds
+Run number 8
+
+Serial Execution Time: 0.589766 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.574556 seconds
+Speed-up: 1.026473
+Efficiency: 102.647275%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.300778 seconds
+Speed-up: 1.960802
+Efficiency: 98.040081%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.300125 seconds
+Speed-up: 1.965068
+Efficiency: 49.126704%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.306698 seconds
+Speed-up: 1.922952
+Efficiency: 24.036905%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.299199 seconds
+Speed-up: 1.971146
+Efficiency: 12.319661%
+Total Execution Time: 11.341155 seconds
+Run number 9
+
+Serial Execution Time: 0.576162 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.548149 seconds
+Speed-up: 1.051104
+Efficiency: 105.110425%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.294712 seconds
+Speed-up: 1.954999
+Efficiency: 97.749935%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.305965 seconds
+Speed-up: 1.883098
+Efficiency: 47.077451%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.297525 seconds
+Speed-up: 1.936515
+Efficiency: 24.206432%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.301498 seconds
+Speed-up: 1.910996
+Efficiency: 11.943723%
+Total Execution Time: 11.134130 seconds
+Run number 10
+
+Serial Execution Time: 0.605611 seconds
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+
+Running Combined Data and Task Parallel Version with 1 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.576946 seconds
+Speed-up: 1.049684
+Efficiency: 104.968436%
+
+Running Combined Data and Task Parallel Version with 2 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.296079 seconds
+Speed-up: 2.045434
+Efficiency: 102.271710%
+
+Running Combined Data and Task Parallel Version with 4 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.298842 seconds
+Speed-up: 2.026528
+Efficiency: 50.663207%
+
+Running Combined Data and Task Parallel Version with 8 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.296390 seconds
+Speed-up: 2.043293
+Efficiency: 25.541167%
+
+Running Combined Data and Task Parallel Version with 16 thread(s):
+Mean Value: 50.550396
+Mode Value: 91.500000 with count 1011092
+Combined Parallel Execution Time: 0.298995 seconds
+Speed-up: 2.025490
+Efficiency: 12.659310%
+Total Execution Time: 11.726262 seconds

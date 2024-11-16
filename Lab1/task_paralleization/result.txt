@@ -1,0 +1,290 @@
+Run number 1
+
+Serial Execution Time: 0.313283 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.326323 seconds
+Speed-up: 0.960038
+Efficiency: 96.003842%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.765489 seconds
+Speed-up: 0.409258
+Efficiency: 20.462920%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.730295 seconds
+Speed-up: 0.428981
+Efficiency: 10.724529%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.608189 seconds
+Speed-up: 0.515107
+Efficiency: 6.438842%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.400779 seconds
+Speed-up: 0.781685
+Efficiency: 4.885531%
+Total Execution Time: 12.027328 seconds
+Run number 2
+
+Serial Execution Time: 0.318098 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.332335 seconds
+Speed-up: 0.957161
+Efficiency: 95.716128%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.744650 seconds
+Speed-up: 0.427177
+Efficiency: 21.358872%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.715898 seconds
+Speed-up: 0.444334
+Efficiency: 11.108342%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.609313 seconds
+Speed-up: 0.522060
+Efficiency: 6.525747%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.411163 seconds
+Speed-up: 0.773654
+Efficiency: 4.835336%
+Total Execution Time: 11.952998 seconds
+Run number 3
+
+Serial Execution Time: 0.319212 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.330116 seconds
+Speed-up: 0.966969
+Efficiency: 96.696941%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.755983 seconds
+Speed-up: 0.422247
+Efficiency: 21.112364%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.702021 seconds
+Speed-up: 0.454704
+Efficiency: 11.367601%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.615095 seconds
+Speed-up: 0.518963
+Efficiency: 6.487042%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.410274 seconds
+Speed-up: 0.778046
+Efficiency: 4.862787%
+Total Execution Time: 11.941226 seconds
+Run number 4
+
+Serial Execution Time: 0.332403 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.565756 seconds
+Speed-up: 0.587538
+Efficiency: 58.753789%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.744835 seconds
+Speed-up: 0.446277
+Efficiency: 22.313869%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.732420 seconds
+Speed-up: 0.453842
+Efficiency: 11.346045%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.605558 seconds
+Speed-up: 0.548920
+Efficiency: 6.861505%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.406222 seconds
+Speed-up: 0.818280
+Efficiency: 5.114247%
+Total Execution Time: 12.711449 seconds
+Run number 5
+
+Serial Execution Time: 0.323175 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.335294 seconds
+Speed-up: 0.963854
+Efficiency: 96.385357%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.751190 seconds
+Speed-up: 0.430217
+Efficiency: 21.510857%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.730559 seconds
+Speed-up: 0.442366
+Efficiency: 11.059155%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.621809 seconds
+Speed-up: 0.519733
+Efficiency: 6.496665%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.410718 seconds
+Speed-up: 0.786854
+Efficiency: 4.917834%
+Total Execution Time: 12.193237 seconds
+Run number 6
+
+Serial Execution Time: 0.321727 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.336234 seconds
+Speed-up: 0.956855
+Efficiency: 95.685533%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.749142 seconds
+Speed-up: 0.429461
+Efficiency: 21.473027%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.703415 seconds
+Speed-up: 0.457379
+Efficiency: 11.434469%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.620841 seconds
+Speed-up: 0.518212
+Efficiency: 6.477648%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.397823 seconds
+Speed-up: 0.808719
+Efficiency: 5.054492%
+Total Execution Time: 12.123856 seconds
+Run number 7
+
+Serial Execution Time: 0.323498 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.335832 seconds
+Speed-up: 0.963275
+Efficiency: 96.327546%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.751151 seconds
+Speed-up: 0.430670
+Efficiency: 21.533513%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.705696 seconds
+Speed-up: 0.458410
+Efficiency: 11.460257%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.617904 seconds
+Speed-up: 0.523542
+Efficiency: 6.544273%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.412025 seconds
+Speed-up: 0.785142
+Efficiency: 4.907137%
+Total Execution Time: 12.157020 seconds
+Run number 8
+
+Serial Execution Time: 0.319918 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.334617 seconds
+Speed-up: 0.956074
+Efficiency: 95.607449%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.761306 seconds
+Speed-up: 0.420223
+Efficiency: 21.011161%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.737528 seconds
+Speed-up: 0.433771
+Efficiency: 10.844270%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.621022 seconds
+Speed-up: 0.515148
+Efficiency: 6.439354%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.411569 seconds
+Speed-up: 0.777314
+Efficiency: 4.858211%
+Total Execution Time: 12.234243 seconds
+Run number 9
+
+Serial Execution Time: 0.333608 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.347685 seconds
+Speed-up: 0.959512
+Efficiency: 95.951160%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.739819 seconds
+Speed-up: 0.450932
+Efficiency: 22.546601%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.713310 seconds
+Speed-up: 0.467690
+Efficiency: 11.692248%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.620902 seconds
+Speed-up: 0.537295
+Efficiency: 6.716192%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.409188 seconds
+Speed-up: 0.815293
+Efficiency: 5.095584%
+Total Execution Time: 12.537691 seconds
+Run number 10
+
+Serial Execution Time: 0.333294 seconds
+
+Running Task Parallel Version with 1 thread(s):
+Task Parallel Execution Time: 0.347187 seconds
+Speed-up: 0.959986
+Efficiency: 95.998610%
+
+Running Task Parallel Version with 2 thread(s):
+Task Parallel Execution Time: 0.746446 seconds
+Speed-up: 0.446508
+Efficiency: 22.325417%
+
+Running Task Parallel Version with 4 thread(s):
+Task Parallel Execution Time: 0.719350 seconds
+Speed-up: 0.463327
+Efficiency: 11.583167%
+
+Running Task Parallel Version with 8 thread(s):
+Task Parallel Execution Time: 0.622280 seconds
+Speed-up: 0.535601
+Efficiency: 6.695018%
+
+Running Task Parallel Version with 16 thread(s):
+Task Parallel Execution Time: 0.418336 seconds
+Speed-up: 0.796715
+Efficiency: 4.979468%
+Total Execution Time: 12.638510 seconds

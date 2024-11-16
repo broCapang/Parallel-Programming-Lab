@@ -1,0 +1,290 @@
+Run number 1
+
+Serial Execution Time: 0.325580 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.316191 seconds
+Speed-up: 1.029694
+Efficiency: 102.969413%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.162989 seconds
+Speed-up: 1.997554
+Efficiency: 99.877699%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.086023 seconds
+Speed-up: 3.784810
+Efficiency: 94.620240%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.045146 seconds
+Speed-up: 7.211684
+Efficiency: 90.146054%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.036572 seconds
+Speed-up: 8.902443
+Efficiency: 55.640269%
+Total Execution Time: 9.993734 seconds
+Run number 2
+
+Serial Execution Time: 0.314637 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.309951 seconds
+Speed-up: 1.015119
+Efficiency: 101.511852%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.162174 seconds
+Speed-up: 1.940124
+Efficiency: 97.006181%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.083222 seconds
+Speed-up: 3.780706
+Efficiency: 94.517651%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.044510 seconds
+Speed-up: 7.068950
+Efficiency: 88.361875%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.036046 seconds
+Speed-up: 8.728873
+Efficiency: 54.555455%
+Total Execution Time: 9.863859 seconds
+Run number 3
+
+Serial Execution Time: 0.321751 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.314591 seconds
+Speed-up: 1.022759
+Efficiency: 102.275878%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.162964 seconds
+Speed-up: 1.974362
+Efficiency: 98.718080%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.087919 seconds
+Speed-up: 3.659608
+Efficiency: 91.490206%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.045035 seconds
+Speed-up: 7.144454
+Efficiency: 89.305671%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.036409 seconds
+Speed-up: 8.837001
+Efficiency: 55.231258%
+Total Execution Time: 10.050322 seconds
+Run number 4
+
+Serial Execution Time: 0.324046 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.317782 seconds
+Speed-up: 1.019713
+Efficiency: 101.971332%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.163480 seconds
+Speed-up: 1.982179
+Efficiency: 99.108974%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.087880 seconds
+Speed-up: 3.687386
+Efficiency: 92.184640%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.044803 seconds
+Speed-up: 7.232724
+Efficiency: 90.409050%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.036603 seconds
+Speed-up: 8.852897
+Efficiency: 55.330608%
+Total Execution Time: 9.969247 seconds
+Run number 5
+
+Serial Execution Time: 0.317020 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.308895 seconds
+Speed-up: 1.026306
+Efficiency: 102.630592%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.159519 seconds
+Speed-up: 1.987353
+Efficiency: 99.367664%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.084481 seconds
+Speed-up: 3.752560
+Efficiency: 93.814010%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.064647 seconds
+Speed-up: 4.903838
+Efficiency: 61.297971%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.035334 seconds
+Speed-up: 8.972170
+Efficiency: 56.076061%
+Total Execution Time: 9.813913 seconds
+Run number 6
+
+Serial Execution Time: 0.315163 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.308301 seconds
+Speed-up: 1.022257
+Efficiency: 102.225692%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.165247 seconds
+Speed-up: 1.907224
+Efficiency: 95.361218%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.083975 seconds
+Speed-up: 3.753056
+Efficiency: 93.826411%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.044149 seconds
+Speed-up: 7.138628
+Efficiency: 89.232847%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.037450 seconds
+Speed-up: 8.415654
+Efficiency: 52.597839%
+Total Execution Time: 9.805857 seconds
+Run number 7
+
+Serial Execution Time: 0.323427 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.318508 seconds
+Speed-up: 1.015446
+Efficiency: 101.544645%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.160902 seconds
+Speed-up: 2.010095
+Efficiency: 100.504738%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.085939 seconds
+Speed-up: 3.763460
+Efficiency: 94.086496%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.045570 seconds
+Speed-up: 7.097426
+Efficiency: 88.717831%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.035881 seconds
+Speed-up: 9.013781
+Efficiency: 56.336130%
+Total Execution Time: 10.003049 seconds
+Run number 8
+
+Serial Execution Time: 0.333467 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.326928 seconds
+Speed-up: 1.020003
+Efficiency: 102.000304%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.166104 seconds
+Speed-up: 2.007580
+Efficiency: 100.378997%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.084157 seconds
+Speed-up: 3.962438
+Efficiency: 99.060945%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.069658 seconds
+Speed-up: 4.787185
+Efficiency: 59.839816%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.035800 seconds
+Speed-up: 9.314769
+Efficiency: 58.217308%
+Total Execution Time: 10.380501 seconds
+Run number 9
+
+Serial Execution Time: 0.318422 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.310637 seconds
+Speed-up: 1.025060
+Efficiency: 102.505956%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.164861 seconds
+Speed-up: 1.931461
+Efficiency: 96.573073%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.087246 seconds
+Speed-up: 3.649711
+Efficiency: 91.242783%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.044614 seconds
+Speed-up: 7.137317
+Efficiency: 89.216459%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.036059 seconds
+Speed-up: 8.830547
+Efficiency: 55.190920%
+Total Execution Time: 9.844254 seconds
+Run number 10
+
+Serial Execution Time: 0.332643 seconds
+
+Running with 1 thread(s):
+Parallel Execution Time: 0.325612 seconds
+Speed-up: 1.021594
+Efficiency: 102.159431%
+
+Running with 2 thread(s):
+Parallel Execution Time: 0.165147 seconds
+Speed-up: 2.014223
+Efficiency: 100.711138%
+
+Running with 4 thread(s):
+Parallel Execution Time: 0.087747 seconds
+Speed-up: 3.790920
+Efficiency: 94.772994%
+
+Running with 8 thread(s):
+Parallel Execution Time: 0.068649 seconds
+Speed-up: 4.845575
+Efficiency: 60.569685%
+
+Running with 16 thread(s):
+Parallel Execution Time: 0.035389 seconds
+Speed-up: 9.399733
+Efficiency: 58.748333%
+Total Execution Time: 10.369639 seconds
