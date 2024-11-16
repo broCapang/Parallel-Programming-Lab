@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <omp.h>
 #define MAX_VALUES 1000 // Maximum number of values to handle
 
 void create_histogram(double *values, int count, double min, double max) {
@@ -35,7 +35,8 @@ void create_histogram(double *values, int count, double min, double max) {
 }
 
 int main() {
-    FILE *file = fopen("../data/data50.txt", "r");
+     double start_time = omp_get_wtime();
+     FILE *file = fopen("../data/data50.txt", "r");
     if (!file) {
         fprintf(stderr, "Error opening file.\n");
         return 1;
@@ -71,6 +72,10 @@ int main() {
     max = (int)max; 
 
     create_histogram(values, count, min, max);
+    double end_time = omp_get_wtime();
+    double execution_time = end_time - start_time;
+
+    printf("Execution Time: %f seconds\n", execution_time);
 
     return 0;
 }
