@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <omp.h>
-#define NUM_BODIES 1000000
+#define NUM_BODIES 10000
 #define NUM_STEPS 100
 #define TIME_STEP 0.01
 #define G 6.67430e-11 // Gravitational constant
