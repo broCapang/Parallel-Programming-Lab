@@ -1,133 +1,135 @@
+//gcc -fopenmp base_code.c -o base_code -lm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <omp.h>
-
-#define NUM_BODIES 1000
-#define NUM_STEPS 100
+#define NUM_BODIES 10000
+#define NUM_STEPS 10
 #define TIME_STEP 0.01
+#define G 6.67430e-11 // Gravitational constant
 
 typedef struct {
-    double a, b, c;
-    double v_a, v_b, v_c;
-    double mass;
-} Particle;
+    double x, y;      // Position
+    double vx, vy;    // Velocity
+    double mass;      // Mass
+} Body;
 
-Particle particles[NUM_BODIES];
-double forceVectors[NUM_BODIES][3];
-omp_lock_t particleLocks[NUM_BODIES];
+Body bodies[NUM_BODIES];
+double forces[NUM_BODIES][2];
 
-void initialize_particles() {
+// Initialize bodies with random values
+void initialize_bodies() {
     for (int i = 0; i < NUM_BODIES; i++) {
-        particles[i].a = rand() / (double)RAND_MAX;
-        particles[i].b = rand() / (double)RAND_MAX;
-        particles[i].c = rand() / (double)RAND_MAX;
-        particles[i].v_a = rand() / (double)RAND_MAX - 0.5;
-        particles[i].v_b = rand() / (double)RAND_MAX - 0.5;
-        particles[i].v_c = rand() / (double)RAND_MAX - 0.5;
-        particles[i].mass = rand() / (double)RAND_MAX + 1.0;
-
-        omp_init_lock(&particleLocks[i]);
+        bodies[i].x = rand() / (double)RAND_MAX;
+        bodies[i].y = rand() / (double)RAND_MAX;
+        bodies[i].vx = rand() / (double)RAND_MAX - 0.5;
+        bodies[i].vy = rand() / (double)RAND_MAX - 0.5;
+        bodies[i].mass = rand() / (double)RAND_MAX + 1.0;
     }
 }
 
-void calculate_forces() {
-
-    #pragma omp parallel for
+// Compute pairwise forces using the reduced algorithm
+void compute_forces() {
+    // Initialize locks for each body
+    omp_lock_t locks[NUM_BODIES];
     for (int i = 0; i < NUM_BODIES; i++) {
-        for (int j = 0; j < 3; j++) {
-            forceVectors[i][j] = 0.0;
+        omp_init_lock(&locks[i]);
+    }
+
+    // Reset forces
+    for (int i = 0; i < NUM_BODIES; i++) {
+        forces[i][0] = 0.0;
+        forces[i][1] = 0.0;
+    }
+
+    // Compute forces
+    #pragma omp parallel for schedule(dynamic)
+    for (int q = 0; q < NUM_BODIES; q++) {
+        for (int k = q + 1; k < NUM_BODIES; k++) {
+            double x_diff = bodies[q].x - bodies[k].x;
+            double y_diff = bodies[q].y - bodies[k].y;
+
+            double dist = sqrt(x_diff * x_diff + y_diff * y_diff) + 1e-10; // Avoid division by zero
+            double dist_cubed = dist * dist * dist;
+
+            double force_qk_x = G * bodies[q].mass * bodies[k].mass / dist_cubed * x_diff;
+            double force_qk_y = G * bodies[q].mass * bodies[k].mass / dist_cubed * y_diff;
+
+            // Protect updates to forces[q] and forces[k] using locks
+            omp_set_lock(&locks[q]);
+            forces[q][0] += force_qk_x;
+            forces[q][1] += force_qk_y;
+            omp_unset_lock(&locks[q]);
+
+            omp_set_lock(&locks[k]);
+            forces[k][0] -= force_qk_x;
+            forces[k][1] -= force_qk_y;
+            omp_unset_lock(&locks[k]);
         }
     }
 
-    #pragma omp parallel for
-    for (int index = 0; index < NUM_BODIES * (NUM_BODIES - 1) / 2; index++) {
-        int bodyA = (int)((sqrt(8.0 * index + 1) - 1) / 2);
-        int bodyB = index - bodyA * (bodyA + 1) / 2;
-
-        double dist_a = particles[bodyB].a - particles[bodyA].a;
-        double dist_b = particles[bodyB].b - particles[bodyA].b;
-        double dist_c = particles[bodyB].c - particles[bodyA].c;
-        double distance = sqrt(dist_a * dist_a + dist_b * dist_b + dist_c * dist_c) + 1e-10;
-        double gravitationalForce = (particles[bodyA].mass * particles[bodyB].mass) / (distance * distance);
-
-        double force_a = gravitationalForce * dist_a / distance;
-        double force_b = gravitationalForce * dist_b / distance;
-        double force_c = gravitationalForce * dist_c / distance;
-
-        omp_set_lock(&particleLocks[bodyA]);
-        forceVectors[bodyA][0] += force_a;
-        forceVectors[bodyA][1] += force_b;
-        forceVectors[bodyA][2] += force_c;
-        omp_unset_lock(&particleLocks[bodyA]);
-
-        omp_set_lock(&particleLocks[bodyB]);
-        forceVectors[bodyB][0] -= force_a;
-        forceVectors[bodyB][1] -= force_b;
-        forceVectors[bodyB][2] -= force_c;
-        omp_unset_lock(&particleLocks[bodyB]);
-    }
-}
-
-void update_particle_positions() {
-    #pragma omp parallel for
+    // Destroy locks
     for (int i = 0; i < NUM_BODIES; i++) {
-        particles[i].v_a += (forceVectors[i][0] / particles[i].mass) * TIME_STEP;
-        particles[i].v_b += (forceVectors[i][1] / particles[i].mass) * TIME_STEP;
-        particles[i].v_c += (forceVectors[i][2] / particles[i].mass) * TIME_STEP;
-
-        particles[i].a += particles[i].v_a * TIME_STEP;
-        particles[i].b += particles[i].v_b * TIME_STEP;
-        particles[i].c += particles[i].v_c * TIME_STEP;
+        omp_destroy_lock(&locks[i]);
     }
 }
 
-void display_sample_positions(int step) {
+
+// Update positions and velocities based on forces
+void update_bodies() {
+    for (int i = 0; i < NUM_BODIES; i++) {
+        bodies[i].vx += (forces[i][0] / bodies[i].mass) * TIME_STEP;
+        bodies[i].vy += (forces[i][1] / bodies[i].mass) * TIME_STEP;
+
+        bodies[i].x += bodies[i].vx * TIME_STEP;
+        bodies[i].y += bodies[i].vy * TIME_STEP;
+    }
+}
+
+// Display positions and velocities for a sample of bodies
+void display_sample(int step) {
     printf("Step %d:\n", step);
-    for (int i = 0; i < 5; i++) { 
-        printf("Particle %d: Position (%.3f, %.3f, %.3f), Velocity (%.3f, %.3f, %.3f)\n",
-               i, particles[i].a, particles[i].b, particles[i].c,
-               particles[i].v_a, particles[i].v_b, particles[i].v_c);
+    for (int i = 0; i < 5; i++) { // Display the first 5 bodies
+        printf("Body %d: Position (%f, %f), Velocity (%f, %f)\n",
+               i, bodies[i].x, bodies[i].y, bodies[i].vx, bodies[i].vy);
     }
 }
 
-void display_kinetic_energy(int step) {
-    double totalKineticEnergy = 0.0;
+// Calculate and print the total kinetic energy of the system
+void calculate_kinetic_energy(int step) {
+    double total_energy = 0.0;
 
-    #pragma omp parallel for reduction(+:totalKineticEnergy)
-    for (int i = 0; i < NUM_BODIES; i++) {
-        double velocitySquared = particles[i].v_a * particles[i].v_a + particles[i].v_b * particles[i].v_b + particles[i].v_c * particles[i].v_c;
-        totalKineticEnergy += 0.5 * particles[i].mass * velocitySquared;
+
+   for (int i = 0; i < NUM_BODIES; i++) {
+        double speed_squared = bodies[i].vx * bodies[i].vx +
+                               bodies[i].vy * bodies[i].vy;
+        total_energy += 0.5 * bodies[i].mass * speed_squared;
     }
 
-    printf("Step %d: Total Kinetic Energy = %.3f\n", step, totalKineticEnergy);
-}
-
-void cleanup_locks() {
-    for (int i = 0; i < NUM_BODIES; i++) {
-        omp_destroy_lock(&particleLocks[i]);
-    }
+    printf("Step %d: Total Kinetic Energy = %f\n", step, total_energy);
 }
 
 int main() {
-    initialize_particles();
+    // Initialize bodies
+    initialize_bodies();
 
-    double startTime = omp_get_wtime();
-
+    double start_time = omp_get_wtime();
+    // Simulation loop
     for (int step = 0; step < NUM_STEPS; step++) {
-        calculate_forces();
-        update_particle_positions();
+        compute_forces();
+        update_bodies();
 
+        // Display every 10 steps or the last step
         if (step % 10 == 0 || step == NUM_STEPS - 1) {
-            display_sample_positions(step);
-            display_kinetic_energy(step);
+            display_sample(step);
+            calculate_kinetic_energy(step);
         }
     }
+    double end_time = omp_get_wtime();
+    printf("Simulation completed in %f seconds.\n", end_time - start_time);
 
-    double endTime = omp_get_wtime();
-    printf("Simulation completed in %.3f seconds.\n", endTime - startTime);
-
-    cleanup_locks();
 
     return 0;
 }
+

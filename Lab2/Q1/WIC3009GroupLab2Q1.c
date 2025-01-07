@@ -4,7 +4,7 @@
 #include <omp.h>     // For OpenMP
 
 #define NUM_BODIES 10000
-#define NUM_STEPS 100
+#define NUM_STEPS 10
 #define TIME_STEP 0.01
 #define G 6.67430e-11 // Gravitational constant
 
@@ -37,30 +37,43 @@ void compute_forces() {
     }
 
     // Compute forces
-    #pragma omp parallel for
-    for (int q = 0; q < NUM_BODIES; q++) {
-        for (int k = q + 1; k < NUM_BODIES; k++) {
-            double x_diff = bodies[q].x - bodies[k].x;
-            double y_diff = bodies[q].y - bodies[k].y;
+    #pragma omp parallel
+    {
+        // Thread-private copy of forces to avoid contention
+        double local_forces[NUM_BODIES][2] = {0.0};
 
-            double dist = sqrt(x_diff * x_diff + y_diff * y_diff) + 1e-10; // Avoid division by zero
-            double dist_cubed = dist * dist * dist;
+        #pragma omp for schedule(dynamic)
+        for (int q = 0; q < NUM_BODIES; q++) {
+            for (int k = q + 1; k < NUM_BODIES; k++) {
+                double x_diff = bodies[q].x - bodies[k].x;
+                double y_diff = bodies[q].y - bodies[k].y;
 
-            double force_qk_x = G * bodies[q].mass * bodies[k].mass / dist_cubed * x_diff;
-            double force_qk_y = G * bodies[q].mass * bodies[k].mass / dist_cubed * y_diff;
+                double dist = sqrt(x_diff * x_diff + y_diff * y_diff) + 1e-10; // Avoid division by zero
+                double dist_cubed = dist * dist * dist;
 
-            // Protect shared forces array with a critical section
-            #pragma omp critical
-            {
-                forces[q][0] += force_qk_x;
-                forces[q][1] += force_qk_y;
+                double force_qk_x = G * bodies[q].mass * bodies[k].mass / dist_cubed * x_diff;
+                double force_qk_y = G * bodies[q].mass * bodies[k].mass / dist_cubed * y_diff;
 
-                forces[k][0] -= force_qk_x;
-                forces[k][1] -= force_qk_y;
+                // Update thread-local forces
+                local_forces[q][0] += force_qk_x;
+                local_forces[q][1] += force_qk_y;
+
+                local_forces[k][0] -= force_qk_x;
+                local_forces[k][1] -= force_qk_y;
+            }
+        }
+
+        // Combine thread-local forces into global forces
+        #pragma omp critical
+        {
+            for (int i = 0; i < NUM_BODIES; i++) {
+                forces[i][0] += local_forces[i][0];
+                forces[i][1] += local_forces[i][1];
             }
         }
     }
 }
+
 
 // Update positions and velocities based on forces
 void update_bodies() {
