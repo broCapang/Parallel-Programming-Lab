@@ -1,8 +1,10 @@
+//gcc -fopenmp base_code.c -o base_code -lm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <omp.h>
-#define NUM_BODIES 1000
+#define NUM_BODIES 1000000
 #define NUM_STEPS 100
 #define TIME_STEP 0.01
 #define G 6.67430e-11 // Gravitational constant
